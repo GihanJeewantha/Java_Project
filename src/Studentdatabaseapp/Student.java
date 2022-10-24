@@ -8,10 +8,11 @@ public class Student {
 	private String LastName;
 	private int gradeyear;
 	private int studentID;
-	private String courses;
-	private String paymentbalance;
+	private String[] courses= new String[10];
+	private int paymentbalance = 0;
 	private static int costofCourse = 20000;
 	private static int id = 001;
+	private int coursecount = 0;
 	
 	
 	
@@ -51,7 +52,28 @@ public class Student {
 	
 	
 	//Enroll to courses
-	
+	public void enroll() {
+		//inside loop , user hit 0
+		
+		System.out.println("Enter Course to enroll (Q to quit)");
+		System.out.println("1.Information Technology\n 2.Cyber Security\n 3.Bussness Management\n 4.Software Engineering ");
+		
+		Scanner Sc = new Scanner(System.in);
+		
+		String courses = Sc.nextLine();
+		while(courses != "Q") {
+			courses = courses+"\n"+courses;
+			 paymentbalance =  paymentbalance + costofCourse;
+			 coursecount ++;
+			 
+			 
+			 
+			
+		}
+		System.out.println("ENROLLED IN: "+courses);
+		System.out.println("TOTAL BALANCE: "+paymentbalance);
+		
+	}
 	
 	
 	//View balance
