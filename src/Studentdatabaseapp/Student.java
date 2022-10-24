@@ -7,10 +7,12 @@ public class Student {
 	private String firstName;
 	private String LastName;
 	private int gradeyear;
-	private int StudentID;
+	private int studentID;
 	private String courses;
 	private String paymentbalance;
-	private int costofCourse = 20000;
+	private static int costofCourse = 20000;
+	private static int id = 001;
+	
 	
 	
 	
@@ -28,11 +30,23 @@ public class Student {
 		System.out.println("Enter Student Year (Ex. year1 = 1 / year2 = 2) : ");
 		this.gradeyear = Sc.nextInt();
 		
-		System.out.println(firstName+" "+LastName+" "+gradeyear+" ");
+		setstudentID();
+		
+		System.out.println(firstName+ " " +LastName+ " " +gradeyear+" "+ studentID);
+		
+		
+		
+		
 	}
 	
 	
 	//generate a ID
+	private void setstudentID() {
+		//Grade Level + ID
+		id++;
+		this.studentID =  id;
+		
+	}
 	
 	
 	
